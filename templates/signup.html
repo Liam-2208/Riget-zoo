@@ -1,12 +1,12 @@
-
 {% extends "base.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
-{{ super() }}
-<style>
-
-</style>
-{% endblock %}
-{% block body %}
-<h1>welcome to sign up page!</h1>
+{% block content %}
+<section class="page-section form-section">
+    <h1>Sign Up</h1>
+    <form class="auth-form">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit">Create Account</button>
+    </form>
+</section>
 {% endblock %}

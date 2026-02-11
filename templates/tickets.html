@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoo Tickets</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='tickets.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 
-<header class="hero">
+<section class="hero hero-tickets">
     <h1>Book Your Zoo Adventure</h1>
-    <p>Choose your ticket type and enjoy a day full of wildlife wonders.</p>
-</header>
+    <p>Choose your ticket type and enjoy a day at Riget Zoo.</p>
+</section>
 
 <section class="ticket-container">
     <div class="ticket-card">
         <h2>Adult Ticket</h2>
         <p class="price">£18</p>
         <p>Perfect for ages 16+</p>
-        <form action="/purchase" method="POST">
+        <form action="{{ url_for('purchase') }}" method="POST">
             <input type="hidden" name="ticket_type" value="adult">
             <button type="submit">Buy Now</button>
         </form>
@@ -28,7 +21,7 @@
         <h2>Child Ticket</h2>
         <p class="price">£10</p>
         <p>Ages 3–15</p>
-        <form action="/purchase" method="POST">
+        <form action="{{ url_for('purchase') }}" method="POST">
             <input type="hidden" name="ticket_type" value="child">
             <button type="submit">Buy Now</button>
         </form>
@@ -38,16 +31,11 @@
         <h2>Family Pass</h2>
         <p class="price">£45</p>
         <p>2 adults + 2 children</p>
-        <form action="/purchase" method="POST">
+        <form action="{{ url_for('purchase') }}" method="POST">
             <input type="hidden" name="ticket_type" value="family">
             <button type="submit">Buy Now</button>
         </form>
     </div>
 </section>
 
-<footer class="footer">
-    <p>© 2026 Wildlife Zoo — Protecting Animals, Inspiring People</p>
-</footer>
-
-</body>
-</html>
+{% endblock %}

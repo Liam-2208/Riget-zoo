@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Riget Zoo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-  
-</body>
-</html>
-<html>
-<head>
 
+<nav class="navbar">
+    <div class="logo">Riget Zoo</div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('tickets') }}">Tickets</a></li>
+        <li><a href="{{ url_for('hotel') }}">Hotel</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('signup') }}">Sign up</a></li>
+    </ul>
+</nav>
 
+<main>
+    {% block content %}{% endblock %}
+</main>
 
-{% block head %}
-
-<title>{% block title %}{% endblock %} - My Application</title>
-
-{% endblock %}
-
-</head>
-<body>
-<div class="topnav">
-  <a class="#active" href="/">Home</a>
-  <a href="about">About us</a>
-  <a href="hotel">Hotel</a>
-  <a href="login">Login</a>
-  <a href="signup">Sign up</a>
-  <a href="tickets.html">Tickets</a>
-
-</div>
-{% block body %}
-{% endblock %}
+<footer class="footer">
+    <p>© {{ 2026 }} Riget Zoo — Protecting Wildlife, Inspiring Visitors</p>
+</footer>
 
 </body>
 </html>

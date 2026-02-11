@@ -1,11 +1,40 @@
 {% extends "base.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
-{{ super() }}
-<style>
+{% block content %}
+<section class="page-section">
+    <h1>Riget Zoo Hotel</h1>
+    <p>Stay overnight and experience the zoo after dark.</p>
 
-</style>
-{% endblock %}
-{% block body %}
-<h1>welcome to hotel page!</h1>
+</section>
+<section class="ticket-container">
+    <div class="ticket-card">
+        <h2>Single Room</h2>
+        <p class="price">£50</p>
+        <p>Perfect solo travelers</p>
+        <form action="{{ url_for('purchase') }}" method="POST">
+            <input type="hidden" name="hotel_type" value="adult">
+            <button type="submit">Buy Now</button>
+        </form>
+    </div>
+
+    <div class="ticket-card">
+        <h2>Twin room</h2>
+        <p class="price">£80</p>
+        <p>Two beds twice the fun.</p>
+        <form action="{{ url_for('purchase') }}" method="POST">
+            <input type="hidden" name="hotel_type" value="child">
+            <button type="submit">Buy Now</button>
+        </form>
+    </div>
+
+    <div class="ticket-card">
+        <h2>Family room</h2>
+        <p class="price">£45</p>
+        <p>2 adults + 2 children</p>
+        <form action="{{ url_for('purchase') }}" method="POST">
+            <input type="hidden" name="hotel_type" value="family">
+            <button type="submit">Buy Now</button>
+        </form>
+    </div>
+</section>
+
 {% endblock %}

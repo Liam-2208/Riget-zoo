@@ -1,12 +1,27 @@
 {% extends "base.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
-{{ super() }}
-<style>
+{% block content %}
 
-</style>
-{% endblock %}
-{% block body %}
-<h1>welcome to home page!</h1>
+<section class="hero hero-home">
+    <div class="hero-text">
+        <h1>Welcome to Riget Zoo</h1>
+        <p>Discover wildlife, and unforgettable experiences.</p>
+        <a href="{{ url_for('tickets') }}" class="primary-btn">Buy Tickets</a>
+    </div>
+</section>
+
+<section class="cards-row">
+    <div class="info-card">
+        <h2>Plan Your Visit</h2>
+        <p>Check opening times and facilities.</p>
+    </div>
+    <div class="info-card">
+        <h2>Stay at the Hotel</h2>
+        <p>Wake up to the sounds of the wild. </p>
+    </div>
+    <div class="info-card">
+        <h2>Login to your account</h2>
+        <p>Your loggin will help you mannage your tickets and bookings.</p>
+    </div>
+</section>
 
 {% endblock %}

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2a7a4b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2a7a4b;
+}
+
+/* HERO SECTIONS */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.hero-home {
+    background: linear-gradient(to bottom right, #2a7a4b, #4caf50);
+}
+
+.hero-tickets {
+    background: linear-gradient(to bottom right, #1b5e20, #43a047);
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+}
+
+/* BUTTONS */
+.primary-btn,
+button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    background: #2a7a4b;
+    color: white;
+    font-size: 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.primary-btn:hover,
+button:hover {
+    background: #256b42;
+    transform: translateY(-1px);
+}
+
+/* CARDS */
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1.8rem;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: left;
+}
+
+/* TICKETS */
+.ticket-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+}
+
+.ticket-card {
+    background: white;
+    padding: 2rem;
+    width: 280px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.ticket-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2a7a4b;
+}
+
+/* FORMS */
+.page-section {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-section {
+    max-width: 400px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.auth-form input {
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+/* CONFIRMATION */
+.confirmation-box {
+    text-align: center;
+    margin: 4rem auto;
+    padding: 2rem;
+    width: 400px;
+    max-width: 90%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #ffffff;
+    margin-top: 2rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .cards-row,
+    .ticket-container {
+        padding: 2rem 1rem;
+    }
+}
