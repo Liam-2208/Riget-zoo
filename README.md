@@ -72,5 +72,5 @@ Adding a dynamic ticket booking system
 Expanding the site with more interactive features
 
 👤 Author
-Cos-A22  
+Cos-A22 & Liam-2208 / Liam Filer
 Front‑End Developer passionate about clean design, intuitive user experiences, and building engaging web projects.
